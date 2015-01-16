@@ -31,12 +31,13 @@ These are the services:
 
 Statutory Rates: These rates are read by R from the rates file.
 ===
-```{r echo=FALSE}
-rates<- read.csv("data/rates.csv", header= TRUE)  
 
-print(rates[,2:3])
-
-
+```
+                    service rate
+1    Behavioral Programming   18
+2 Independent Living Skills   16
+3            Supported Work   14
+4            Custodial Care   12
 ```
 
 
