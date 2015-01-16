@@ -14,11 +14,11 @@ shinyUI(fluidPage(
                to total cost.  The next graph assists in gauging
                the hour maximum for each service."),
                p("App Documentation:",a("CaseManagement",href="Documentation.html")),
-               p("App Code:" ,a("Code",href="code.html")),
+               p("App Code:" ,a("Code",href="doc1.html")),
       
       selectInput("var", 
                   label = "Service to calculate",
-                  choices = c("Behavioral Programing", "Independent Living Skills",
+                  choices = c("Behavioral Programming", "Independent Living Skills",
                               "Supported Work", "Custodial Care"),
                   selected = "Custodial Care"),
       
@@ -28,9 +28,11 @@ shinyUI(fluidPage(
     ),
     mainPanel(
       plotOutput("CostPlot"),  
+      uiOutput("overbudget"),
       tabsetPanel(type = "tabs", 
-                  tabPanel("Summary", textOutput("text3")),
-                  tabPanel("About", textOutput("text1"))
+                  tabPanel("About", textOutput("text1")),
+                  tabPanel("Summary", textOutput("text2"))
+                  
                 
       )
       
